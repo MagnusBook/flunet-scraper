@@ -6,3 +6,10 @@ This project scrapes the [FluNet](https://apps.who.int/flumart/Default?ReportNo=
 
 Requirements are contained within `requirements.txt`, and can be installed using `pip install --requirement requrirements.txt`. This project uses FireFox for the web driver, and requires the [geckodriver](https://github.com/mozilla/geckodriver/releases) to be in the path. This can be changed to other browsers/drivers if needed.
 
+
+## Usage
+This script allows for an input file to be passed as an argument in case the execution failed at some point. If an input file is passed, the script will continue from the last country in the file.
+
+```
+python flunet-scraper.py -i <input file to resume scrping from> -o <output file>
+```
